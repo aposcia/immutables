@@ -64,9 +64,23 @@ public final class ProxyProcessor implements Processor {
 
   @Override
   public void init(ProcessingEnvironment processing) {
+    int target = -5;
+    int num = 3;
+
+    target =- num;  // Noncompliant; target = -3. Is that really what's meant?
+    target =+ num; // Noncompliant; target = 3
+
+    BadMethodNam3452342_test_fsdikghoisdhgiodshgoisdhoigshioghdso("1", "4234242342","esrwerwr342423");
     delegate.init(processing);
   }
 
+
+
+  private String BadMethodNam3452342_test_fsdikghoisdhgiodshgoisdhoigshioghdso(String arg1, String arg2, String arg3)
+  {
+    System.out.println(arg2+ "blablablab");
+    return "youplalala";
+  }
   @Override
   public boolean process(Set<? extends TypeElement> annotations, RoundEnvironment round) {
     return delegate.process(annotations, round);
