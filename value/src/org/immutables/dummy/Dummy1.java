@@ -1,7 +1,7 @@
 package org.immutables.dummy;
 
 /** For javadoc only. Please use value-annotations for real docs. */
-public class Dummy {
+public class Dummy1 {
 
   public static void main(String[] args) {
     System.out.println("HELLO dsada");
